@@ -55,36 +55,6 @@ function AnimatedNumber({ value, className }: { value: number; className?: strin
   return <span className={className}>{displayed}</span>
 }
 
-// Landing Navbar (marketing only - no auth)
-function LandingNav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="flex h-16 items-center justify-between">
-          <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Oracle Universe
-          </span>
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/Soul-Brews-Studio/shrimp-oracle"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-slate-400 hover:text-slate-200 transition-colors"
-            >
-              GitHub
-            </a>
-            <a href={APP_URL}>
-              <Button size="sm">
-                Launch App
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
-}
 
 // Scroll indicator
 function ScrollIndicator() {
@@ -390,7 +360,6 @@ export default function Landing() {
 
   return (
     <div className="h-screen overflow-y-auto snap-y snap-mandatory bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 hide-scrollbar">
-      <LandingNav />
       <div className="snap-start snap-always h-screen flex items-center justify-center relative">
         <HeroSection oracleCount={oracleCount} humanCount={humanCount} agentCount={agentCount} />
         <ScrollIndicator />
